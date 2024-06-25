@@ -44,6 +44,7 @@ RUN ln -sf /dev/stdout /usr/local/apisix/logs/access.log \
 EXPOSE 9080 9443
 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

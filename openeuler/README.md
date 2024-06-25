@@ -23,8 +23,8 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
    ```
 2. 通过docker构建服务
    ```
-   // a.运行一个golang:1.7.5的服务，挂载本地etcd源码到容器/opt/etcd目录，启动run，并进入容器：-it bash
-   docker run -v /home/k8s/ingress-apisix/source-build-image/etcd/:/opt/etcd -it --rm golang:1.22.4 bash
+   // a.运行一个golang:1.7.5的服务，挂载本地etcd源码/path/to/etcd到容器/opt/etcd目录，启动run，并进入容器：-it bash
+   docker run -v /path/to/etcd/:/opt/etcd -it --rm golang:1.22.4 bash
    // b. 进入容器源码挂载目录
    cd /opt/etcd
    // c. 编译
@@ -38,7 +38,7 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
    ```
 3. 复制上述三个执行文件到构建目录
    ```
-   cp -ri /etcd/bin openeuler/etcd
+   cp -ri /etcd/bin/* openeuler/etcd
    ```
 4. 创建镜像
    ```
@@ -61,6 +61,8 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
    ```
    vim Dockerfile
    ```
+   修改最后一层构建镜像
+
    before
    ```
    FROM gcr.io/distroless/static-debian12:${BASE_IMAGE_TAG}

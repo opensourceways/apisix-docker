@@ -4,7 +4,7 @@ ARG APISIX_DASHBOARD_VERSION=v3.0.1
 
 RUN set -x \
     && dnf install -y git \
-    && git clone https://github.com/ssignik/apisix-dashboard.git -b ${APISIX_DASHBOARD_VERSION} /usr/local/apisix-dashboard \
+    && git clone https://github.com/apache/apisix-dashboard.git -b ${APISIX_DASHBOARD_VERSION} /usr/local/apisix-dashboard \
     && cd /usr/local/apisix-dashboard && git clean -Xdf \
     && rm -f ./.githash && git log --pretty=format:"%h" -1 > ./.githash
 
