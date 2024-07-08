@@ -19,7 +19,7 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
 ## ETCD
 1. 复制指定分支代码到本地
    ```
-   git clone -b v3.5.14 https://github.com/etcd-io/etcd.git
+   git clone -b v3.5.14 https://github.com/opensourceways/etcd.git
    ```
 2. 通过docker构建服务
    ```
@@ -54,7 +54,7 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
 ## Ingress Controller
 1. 复制指定分支代码到本地
    ```
-   git clone -b v1.8.2 https://github.com/apache/apisix-ingress-controller.git
+   git clone -b v1.8.2 https://github.com/opensourceways/apisix-ingress-controller.git
    cd apisix-ingress-controller
    ```
 2. 修改Dockefile基础镜像

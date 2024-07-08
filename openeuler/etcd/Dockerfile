@@ -3,8 +3,6 @@ FROM openeuler/openeuler:22.03
 ADD etcd /usr/local/bin/
 ADD etcdctl /usr/local/bin/
 ADD etcdutl /usr/local/bin/
-COPY scripts /opt/bitnami/scripts/
-RUN chmod -R +x /opt/bitnami/scripts/
 
 WORKDIR /var/etcd/
 WORKDIR /var/lib/etcd/
