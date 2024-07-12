@@ -28,7 +28,9 @@ Apache APISIX 是一个动态、实时、高性能的云原生 API 网关。包�
    // b. 进入容器源码挂载目录
    cd /opt/etcd
    // c. 编译
-   make
+   sed -i 's/\r$//' *.sh
+   export CGO_ENABLED=1
+   make build
    ```
    成功后可见源码目录下新增的bin目录有三个可执行文件etcd  etcdctl  etcdutl
    ```
